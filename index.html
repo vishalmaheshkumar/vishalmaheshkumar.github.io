@@ -1,49 +1,688 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Vishal | Product Manager</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Vishal Mahesh Kumar | Software Engineer & Management Engineering Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Software engineer and Management Engineering student with experience in ServiceNow, integrations, and product-focused engineering." />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0f172a;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: #020617;
+      --border: rgba(148, 163, 184, 0.2);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.9);
+      --radius-lg: 18px;
+      --radius-sm: 10px;
+      --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+                   "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background: radial-gradient(circle at top, #1f2937 0, #020617 48%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.92), transparent);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.7);
+    }
+
+    .nav {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #4ade80 0, #16a34a 40%, #22c55e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.02em;
+      color: #020617;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.45);
+    }
+
+    .nav-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, #22c55e, #4ade80);
+      border-radius: 999px;
+      transition: width 0.2s ease-out;
+    }
+
+    .nav-links a:hover {
+      color: #e5e7eb;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.08), transparent 55%);
+      color: var(--muted);
+      font-size: 0.78rem;
+      padding: 6px 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.2);
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
+                  background 0.12s ease-out, border-color 0.12s ease-out;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(to right, #22c55e, #4ade80);
+      color: #020617;
+      box-shadow: 0 12px 28px rgba(22, 163, 74, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 36px rgba(22, 163, 74, 0.6);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      border-color: #22c55e;
+      color: #e5e7eb;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.12), transparent 55%);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .shell {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 26px 18px 64px;
+      display: grid;
+      grid-template-columns: 2.1fr 1.65fr;
+      gap: 42px;
+    }
+
+    @media (max-width: 880px) {
+      .shell {
+        grid-template-columns: 1fr;
+        padding-top: 18px;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        padding-inline: 14px;
+      }
+      .shell {
+        padding-inline: 14px;
+      }
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.35rem, 3vw, 2.9rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+
+    .hero-highlight {
+      background: linear-gradient(to right, #4ade80, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      color: var(--muted);
+      max-width: 38rem;
+      font-size: 0.98rem;
+    }
+
+    .hero-tags {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-meta {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: var(--radius-lg);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.12), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.09), transparent 55%),
+                  linear-gradient(to bottom right, rgba(15, 23, 42, 0.98), #020617);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+      padding: 18px 18px 16px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .card-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .split {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .split-col {
+      flex: 1;
+      min-width: 140px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 0.86rem;
+    }
+
+    .list {
+      list-style: none;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .list li {
+      margin-bottom: 6px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .list li::before {
+      content: "•";
+      color: #4ade80;
+      margin-top: 1px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+      color: #bbf7d0;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #4ade80;
+    }
+
+    .pill-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill-small {
+      font-size: 0.76rem;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      color: var(--muted);
+    }
+
+    .timeline {
+      margin-top: 8px;
+      border-left: 1px solid rgba(148, 163, 184, 0.3);
+      padding-left: 14px;
+    }
+
+    .timeline-item {
+      margin-bottom: 10px;
+    }
+
+    .timeline-role {
+      font-size: 0.86rem;
+      font-weight: 500;
+    }
+
+    .timeline-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .timeline-item p {
+      margin-top: 4px;
+    }
+
+    .quote {
+      font-size: 0.84rem;
+      color: var(--muted);
+      border-left: 2px solid rgba(148, 163, 184, 0.5);
+      padding-left: 10px;
+      margin-top: 6px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.95), #020617 55%);
+      padding: 16px 18px 20px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+  </style>
 </head>
-
 <body>
+  <div class="page">
+    <header>
+      <nav class="nav">
+        <div class="nav-left">
+          <div class="logo">VM</div>
+          <div class="nav-name">VISHAL MAHESH KUMAR</div>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <div class="pill">
+            <span class="pill-dot"></span>
+            <span>Open to working student & engineering roles</span>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-<h1>Vishal Mahesh Kumar</h1>
-<p>Aspiring Product Manager | RWTH Aachen</p>
+    <main>
+      <section class="shell">
+        <!-- Left column: hero -->
+        <div class="hero-text">
+          <h1>
+            Building reliable<br />
+            <span class="hero-highlight">software, systems & integrations</span>
+          </h1>
+          <p class="hero-sub" id="about">
+            Software engineer and Management Engineering student in Aachen, with experience delivering
+            enterprise integrations, product features, and customer‑centric solutions across global teams.
+          </p>
 
-<h2>About Me</h2>
-<p>
-Engineering professional with 3+ years experience in ServiceNow,
-Product Architecture and Stakeholder Management at Flexera.
-</p>
+          <div class="hero-tags">
+            <span class="tag">ServiceNow · Integrations</span>
+            <span class="tag">Golang · JavaScript · Python</span>
+            <span class="tag">REST & GraphQL APIs</span>
+            <span class="tag">AWS · Databases</span>
+          </div>
 
-<h2>Recommendations</h2>
+          <div class="hero-actions">
+            <a href="Vishal_Mahesh_Kumar_RESUME.pdf" class="btn btn-primary">
+              Download résumé
+            </a>
+            <a href="#contact" class="btn btn-ghost">
+              Get in touch
+            </a>
+          </div>
 
-<p>
-<b>Stephen Morris – ServiceNow Expert</b><br>
-"He was a fantastic value add for our team.
-He learned fast, showed enthusiasm,
-innovation and produced good results."
-</p>
+          <div class="hero-meta">
+            <div>
+              <strong>Currently:</strong> M.Sc. Management Engineering (MME‑TIME), RWTH Aachen
+            </div>
+            <div>
+              <strong>Previously:</strong> Software Development Engineer, Flexera
+            </div>
+            <div>
+              <strong>Location:</strong> Aachen, Germany
+            </div>
+          </div>
+        </div>
 
-<p>
-<b>Ian Outterside – Senior Engineering Manager</b><br>
-"Vishal is deeply committed to ensuring high standards of
-customer quality, consistently going the extra mile."
-</p>
+        <!-- Right column: cards -->
+        <div class="hero-right">
+          <!-- Skills & focus -->
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Technical focus</div>
+                <div class="card-sub">Engineering, integrations & product thinking</div>
+              </div>
+              <div class="badge">
+                <span class="badge-dot"></span>
+                <span>ServiceNow expert</span>
+              </div>
+            </div>
 
-<p>
-<b>Andrew de Guzman – Technical Support Engineer</b><br>
-"Vishal was always willing to step in and provide
-clear, detailed technical insights."
-</p>
+            <div class="split">
+              <div class="split-col">
+                <h2>Core skills</h2>
+                <ul class="list">
+                  <li>Designing and implementing scalable integrations and ETL pipelines.</li>
+                  <li>Building and maintaining ServiceNow applications and data models.</li>
+                  <li>Driving features end‑to‑end with product and support teams.</li>
+                </ul>
+              </div>
+              <div class="split-col">
+                <h2>Tech stack</h2>
+                <div class="pill-row">
+                  <span class="pill-small">ServiceNow</span>
+                  <span class="pill-small">Golang</span>
+                  <span class="pill-small">JavaScript</span>
+                  <span class="pill-small">Python</span>
+                  <span class="pill-small">REST</span>
+                  <span class="pill-small">GraphQL</span>
+                  <span class="pill-small">AWS</span>
+                  <span class="pill-small">PostgreSQL</span>
+                  <span class="pill-small">MongoDB</span>
+                </div>
+              </div>
+            </div>
 
-<h2>Resume</h2>
-<a href="resume.pdf" download>
-Download My Resume
-</a>
+            <h2>Business & product lens</h2>
+            <p>
+              Combining engineering experience with training in data analysis, strategy, innovation,
+              and marketing to build solutions that solve real customer and business problems.
+            </p>
+          </article>
 
-<h2>Contact</h2>
-<p>Email: vishalm.masters@gmail.com</p>
+          <!-- Experience timeline -->
+          <article class="card" id="experience">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Experience snapshot</div>
+                <div class="card-sub">3+ years in software & product engineering</div>
+              </div>
+            </div>
 
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-role">Software Development Engineer · Flexera</div>
+                <div class="timeline-meta">Sep 2022 – Sep 2025 · Remote / Global team</div>
+                <p>
+                  Worked on FlexeraOne and ServiceNow integrations, redesigning data flows and ETL
+                  pipelines to improve performance and reliability for enterprise customers.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-role">Software Engineer Intern · Deevia Software</div>
+                <div class="timeline-meta">Mar 2022 – Aug 2022</div>
+                <p>
+                  Built image‑processing software for oil‑rig systems using Python, C, and OpenCV,
+                  supporting real‑time analysis in challenging environments.
+                </p>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-role">B.E. Electronics & Telecommunication · RVCE</div>
+                <div class="timeline-meta">2018 – 2022</div>
+                <p>
+                  Hands‑on projects in embedded systems, vehicle control, and data acquisition,
+                  including leadership roles in Formula Student competitions.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certifications & testimonials -->
+          <article class="card" id="projects">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Certifications & highlights</div>
+                <div class="card-sub">Proof of skills & impact</div>
+              </div>
+            </div>
+
+            <h2>Selected certifications</h2>
+            <ul class="list">
+              <li>ServiceNow Certified System Administrator (CSA).</li>
+              <li>ServiceNow Certified Application Developer (CAD).</li>
+              <li>Google Foundations of Project Management (Coursera).</li>
+            </ul>
+
+            <h2 style="margin-top: 10px;">What colleagues say</h2>
+            <p class="quote">
+              “Vishal brings a combination of professionalism, adaptability, and integrity to every task,
+              consistently going the extra mile to deliver high‑quality results.”
+            </p>
+            <p class="quote">
+              “His deep technical knowledge and collaborative spirit make complex issues easier to solve
+              and help teams move forward with confidence.”
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="shell" id="contact" style="padding-top: 0;">
+        <div style="grid-column: 1 / -1;">
+          <article class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Let’s connect</div>
+                <div class="card-sub">Working student · engineering · product · integrations</div>
+              </div>
+            </div>
+            <p>
+              Interested in roles where engineering, product thinking, and data intersect. Open to
+              working student positions, part‑time roles, and project collaborations in Germany or remote.
+            </p>
+
+            <div class="pill-row" style="margin-top: 14px;">
+              <a href="mailto:vishalm.masters@gmail.com" class="btn btn-primary">
+                Email Vishal
+              </a>
+              <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" target="_blank" class="btn btn-ghost">
+                View LinkedIn
+              </a>
+              <a href="https://github.com/YOUR-GITHUB-HANDLE" target="_blank" class="btn btn-ghost">
+                View GitHub
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Vishal Mahesh Kumar</div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Highlights</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Keep copyright year current
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
