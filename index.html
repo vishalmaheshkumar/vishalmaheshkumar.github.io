@@ -772,6 +772,25 @@
         align-items: center;
       }
 
+          .exp-item {
+        display: grid;
+        grid-template-columns: 160px 1fr auto;
+        gap: 20px;
+        align-items: center;
+      }
+      
+      .exp-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .edu-left-logo {
+        width: 60px;
+        height: auto;
+        margin-top: 10px;
+      }
+
 
     /* ── FOOTER ── */
     footer {
@@ -1042,12 +1061,13 @@
 
     <!-- RWTH -->
     <div class="exp-item">
-      <div class="exp-period">Oct 2025 – Mar 2027</div>
-      <div>
-        <div class="edu-header">
-          <img src="./assets/rwth_logo.svg" class="edu-logo">
-          <div class="exp-role">M.Sc. Management &amp; Engineering (MME-TIME)</div>
-        </div>
+      <div class="exp-left">
+        <div class="exp-period">Oct 2025 – Mar 2027</div>
+        <img src="./assets/rwth_logo.svg" class="edu-left-logo" alt="RWTH Logo">
+      </div>
+
+      <div class="exp-right">
+        <div class="exp-role">M.Sc. Management &amp; Engineering (MME-TIME)</div>
         <div class="exp-company">RWTH Aachen University – Business School, Germany</div>
         <div class="exp-desc">
           Specialisation in Technology, Innovation, Marketing &amp; Entrepreneurship.
@@ -1055,17 +1075,19 @@
           and Product-Driven Decision Making.
         </div>
       </div>
+
       <div class="exp-badge">Current</div>
     </div>
 
     <!-- RVCE -->
     <div class="exp-item">
-      <div class="exp-period">Aug 2018 – Aug 2022</div>
-      <div>
-        <div class="edu-header">
-          <img src="./assets/rvce_logo.png" class="edu-logo">
-          <div class="exp-role">B.E. Electronics &amp; Telecommunication Engineering</div>
-        </div>
+      <div class="exp-left">
+        <div class="exp-period">Aug 2018 – Aug 2022</div>
+        <img src="./assets/rvce_logo.png" class="edu-left-logo" alt="RVCE Logo">
+      </div>
+
+      <div class="exp-right">
+        <div class="exp-role">B.E. Electronics &amp; Telecommunication Engineering</div>
         <div class="exp-company">RV College of Engineering, Bangalore</div>
         <div class="exp-desc">
           Designed the Vehicle Control Unit (VCU) and Data Acquisition System for
@@ -1073,6 +1095,7 @@
           Secured 1st place at Formula Hybrid 2021 (USA) under IEEE &amp; Formula Student.
         </div>
       </div>
+
       <div class="exp-badge">Bachelor's</div>
     </div>
 
