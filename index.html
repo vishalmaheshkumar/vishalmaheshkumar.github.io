@@ -781,7 +781,22 @@
         max-width: none;
       }
 
-
+        .company-logo {
+          width: 180px;
+          height: auto;
+          margin-top: 10px;
+          object-fit: contain;
+          max-width: none;
+        }
+        
+        .exp-company a {
+          color: var(--accent);
+          text-decoration: none;
+        }
+        
+        .exp-company a:hover {
+          text-decoration: underline;
+        }
     /* ── FOOTER ── */
     footer {
       background: #080808;
@@ -979,6 +994,7 @@
   <div class="divider"></div>
 
   <!-- EXPERIENCE -->
+<!-- EXPERIENCE -->
 <section class="section" id="experience">
   <div class="section-label">
     <span class="section-label-num">02</span>
@@ -989,46 +1005,88 @@
 
   <div class="exp-grid reveal">
 
+    <!-- FLEXERA SDE -->
     <div class="exp-item">
-      <div class="exp-period">Apr 2023 – Sep 2025</div>
-      <div>
+      <div class="exp-left">
+        <div class="exp-period">Apr 2023 – Sep 2025</div>
+        <img src="./flexera_logo.svg" class="company-logo">
+      </div>
+
+      <div class="exp-right">
         <div class="exp-role">Software Development Engineer</div>
-        <div class="exp-company">Flexera Software — R&amp;D Engineering (Promoted)</div>
+
+        <div class="exp-company">
+          <a href="https://www.flexera.com/" target="_blank">
+            Flexera Software
+          </a>
+          <span style="color:#888; font-size:0.78rem;">
+            — A global IT asset management and cloud cost optimisation company.
+          </span>
+        </div>
+
         <div class="exp-desc">
           Owned the FlexeraOne and Flexera Integration ServiceNow scoped applications end-to-end.
           Led a 70% architecture transformation migrating ETL workloads from ServiceNow to AWS,
           and built a SMART API that cut customer-side load by 60%.
-          Prototyped GraphQL and MCP integrations with OpenAI.
-          Delivered cross-functional training and owned technical escalations from a global support team.
         </div>
       </div>
+
       <div class="exp-badge">Promoted</div>
     </div>
 
+    <!-- FLEXERA ASE -->
     <div class="exp-item">
-      <div class="exp-period">Sep 2022 – Apr 2023</div>
-      <div>
+      <div class="exp-left">
+        <div class="exp-period">Sep 2022 – Apr 2023</div>
+        <img src="./flexera_logo.svg" class="company-logo">
+      </div>
+
+      <div class="exp-right">
         <div class="exp-role">Associate Software Engineer</div>
-        <div class="exp-company">Flexera Software</div>
+
+        <div class="exp-company">
+          <a href="https://www.flexera.com/" target="_blank">
+            Flexera Software
+          </a>
+          <span style="color:#888; font-size:0.78rem;">
+            — Provides enterprise SaaS and ITAM solutions to Fortune 500 firms.
+          </span>
+        </div>
+
         <div class="exp-desc">
-          Joined on Flexera SaaS Manager — conducted API research, integrations,
-          and maintained services built on MongoDB, PostgreSQL, and AWS S3/CloudWatch.
-          Earned a Professionalism Badge for outstanding research and cross-team collaboration within the first six months.
+          Conducted API research, integrations, and maintained services built on MongoDB,
+          PostgreSQL, AWS S3 and CloudWatch.
         </div>
       </div>
+
       <div class="exp-badge">First role</div>
     </div>
 
+    <!-- DEEVIA -->
     <div class="exp-item">
-      <div class="exp-period">Mar 2022 – Aug 2022</div>
-      <div>
+      <div class="exp-left">
+        <div class="exp-period">Mar 2022 – Aug 2022</div>
+        <img src="./deevia_logo.png" class="company-logo">
+      </div>
+
+      <div class="exp-right">
         <div class="exp-role">Software Engineer Intern</div>
-        <div class="exp-company">Deevia Software India Pvt. Ltd.</div>
+
+        <div class="exp-company">
+          <a href="https://www.deevia.pw/" target="_blank">
+            Deevia Software India Pvt. Ltd.
+          </a>
+          <span style="color:#888; font-size:0.78rem;">
+            — Develops software solutions for industrial automation & oil-rig systems.
+          </span>
+        </div>
+
         <div class="exp-desc">
-          Developed image-processing software for oil-rig systems using Python, C++, and OpenCV —
-          supporting real-time analysis in remote and technically demanding environments.
+          Developed image-processing software for oil-rig systems using Python,
+          C++, and OpenCV for real-time remote analysis.
         </div>
       </div>
+
       <div class="exp-badge">Internship</div>
     </div>
 
