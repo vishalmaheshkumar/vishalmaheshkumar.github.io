@@ -798,13 +798,26 @@
           text-decoration: underline;
         }
 
-        .logo-chip {
-          background: #1a1a1a;
-          padding: 10px 14px;
-          border-radius: 8px;
-          display: inline-block;
-          margin-top: 10px;
+        /* ---- Deevia Logo Visual Balance ---- */
+        
+        .deevia-chip {
+          background: #f6f6f6;
+          padding: 6px 10px;
+          border-radius: 6px;
         }
+        
+        .deevia-logo {
+          width: 160px;
+          opacity: 0.85;
+          filter: grayscale(20%);
+        }
+
+
+    .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
 
 
 
@@ -1076,8 +1089,8 @@
     <div class="exp-item">
       <div class="exp-left">
         <div class="exp-period">Mar 2022 – Aug 2022</div>
-          <div class="logo-chip">
-            <img src="./assets/deevia_logo.png" class="company-logo">
+          <div class="logo-chip deevia-chip">
+            <img src="./assets/deevia_logo.png" class="company-logo deevia-logo">
           </div>
       </div>
 
@@ -1165,7 +1178,7 @@
   <div class="skills-section" id="skills">
     <div class="skills-inner">
       <div class="section-label">
-        <span class="section-label-num">03</span>
+        <span class="section-label-num">04</span>
         <span>—</span>
         Skills &amp; Stack
       </div>
@@ -1245,7 +1258,7 @@
   <!-- CERTIFICATIONS -->
   <section class="section">
     <div class="section-label">
-      <span class="section-label-num">04</span>
+      <span class="section-label-num">05</span>
       <span>—</span>
       Certifications
     </div>
@@ -1292,66 +1305,54 @@
   </section>
 
   <div class="divider"></div>
-
-  <!-- TESTIMONIALS -->
-  <div class="testimonials-section">
-    <section class="section">
-      <div class="section-label">
-        <span class="section-label-num">05</span>
-        <span>—</span>
-        What colleagues say
-      </div>
-      <h2 class="section-h2 reveal" style="margin-bottom: 48px;">Trusted by<br>those who built<br>alongside me.</h2>
-
-        <div class="testimonials-grid">
-        
-          <!-- ANDREW FIRST -->
-          <div class="testimonial-card reveal">
-            <div class="testimonial-quote">"</div>
-            <div class="testimonial-text">
-              Vishal was always willing to step in and provide clear, detailed technical insights that helped me move cases forward with confidence. His patience, deep technical knowledge, and collaborative spirit made complex issues easier to solve for our customers.
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">A</div>
-              <div>
-                <div class="author-name">Andrew de Guzman</div>
-                <div class="author-role">Technical Support Engineer · Flexera</div>
-              </div>
-            </div>
-          </div>
-        
-          <!-- IAN SECOND -->
-          <div class="testimonial-card reveal reveal-delay-1">
-            <div class="testimonial-quote">"</div>
-            <div class="testimonial-text">
-              In 2025 I managed Vishal at Flexera. Vishal brings a combination of professionalism, adaptability, and integrity to every task he is presented with. Vishal is deeply committed to ensuring high standards of customer quality, consistently going the extra mile to conduct thorough and meticulous due diligence. What sets Vishal apart is his adaptability—whether faced with shifting priorities, evolving project scopes, or changing workloads, he responds with focus, agility, and an unwavering commitment to delivering results. His input is always candid and considered, and takes a customer first mindset. Vishal’s work ethic, attention to detail, and honest perspective make him an asset to his team. I recommend him to any organization seeking a thoughtful, customer focussed and adaptable professional.
-            </div>
-            <div class="testimonial-author">
-              <div class="author-avatar">I</div>
-              <div>
-                <div class="author-name">Ian Outterside</div>
-                <div class="author-role">Senior Engineering Manager · Flexera (Direct Manager)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <div class="testimonial-quote">"</div>
-          <div class="testimonial-text">
-            He learned fast, showed enthusiasm, innovation, and produced good results. He was a fantastic value add for our team. I would gladly have him on my team again anytime.
-          </div>
-          <div class="testimonial-author">
-            <div class="author-avatar">S</div>
-            <div>
-              <div class="author-name">Stephen Morris</div>
-              <div class="author-role">Digital Connectivist · ServiceNow Expert (Mentor at Flexera)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- FEATURED TESTIMONIAL -->
+<div class="testimonial-card reveal" style="margin-bottom:24px;">
+  <div class="testimonial-quote">"</div>
+  <div class="testimonial-text">
+    In 2025 I managed Vishal at Flexera. Vishal brings professionalism, adaptability, and integrity to every task. His work ethic, attention to detail, and customer-first mindset make him an asset to any team.
   </div>
+  <div class="testimonial-author">
+    <div class="author-avatar">I</div>
+    <div>
+      <div class="author-name">Ian Outterside</div>
+      <div class="author-role">Senior Engineering Manager · Flexera</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECONDARY GRID -->
+<div class="testimonials-grid">
+
+  <div class="testimonial-card reveal">
+    <div class="testimonial-quote">"</div>
+    <div class="testimonial-text">
+      Vishal was always willing to step in and provide clear technical insights that helped move cases forward with confidence. His patience and deep technical knowledge made complex issues easier to solve.
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">A</div>
+      <div>
+        <div class="author-name">Andrew de Guzman</div>
+        <div class="author-role">Technical Support Engineer · Flexera</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-card reveal reveal-delay-1">
+    <div class="testimonial-quote">"</div>
+    <div class="testimonial-text">
+      He learned fast, showed enthusiasm, innovation, and produced strong results. I would gladly have him on my team again anytime.
+    </div>
+    <div class="testimonial-author">
+      <div class="author-avatar">S</div>
+      <div>
+        <div class="author-name">Stephen Morris</div>
+        <div class="author-role">ServiceNow Expert · Mentor</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+ 
 
   <!-- CONTACT -->
   <div class="contact-section" id="contact">
@@ -1373,7 +1374,7 @@
         <a href="https://www.linkedin.com/in/vishal-mahesh-kumar-a29049184/" target="_blank" class="contact-link">
           <div>
             <div class="contact-link-label">LinkedIn</div>
-            <div class="contact-link-val">Vishal Mahesh Kumar/</div>
+            <div class="contact-link-val">Vishal Mahesh Kumar</div>
           </div>
           <span class="contact-arrow">→</span>
         </a>
