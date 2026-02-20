@@ -125,140 +125,149 @@
     }
 
     /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 120px 48px 80px;
-      max-width: var(--max);
-      margin: 0 auto;
-      position: relative;
-    }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 48px 80px;
+  max-width: var(--max);
+  margin: 0 auto;
+  position: relative;
+}
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.76rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 28px;
-      opacity: 0;
-      animation: fadeUp 0.8s var(--ease) 0.2s forwards;
-    }
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.8s var(--ease) 0.2s forwards;
+}
 
-    .hero-eyebrow-line {
-      width: 32px;
-      height: 1px;
-      background: var(--accent);
-    }
+.hero-eyebrow-line {
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
 
-    .hero-h1 {
-      font-family: var(--font-display);
-      font-size: clamp(3.6rem, 7vw, 7rem);
-      font-weight: 300;
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-      max-width: 14ch;
-      opacity: 0;
-      animation: fadeUp 0.9s var(--ease) 0.35s forwards;
-    }
+.hero-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.8vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  max-width: 22ch;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease) 0.35s forwards;
+}
 
-    .hero-h1 em {
-      font-style: italic;
-      font-weight: 300;
-      color: var(--accent);
-    }
+.hero-h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
 
-    .hero-sub {
-      margin-top: 32px;
-      font-size: 1.05rem;
-      font-weight: 300;
-      line-height: 1.7;
-      color: var(--ink-soft);
-      max-width: 54ch;
-      opacity: 0;
-      animation: fadeUp 0.9s var(--ease) 0.5s forwards;
-    }
+.hero-sub {
+  margin-top: 32px;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  max-width: 54ch;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease) 0.5s forwards;
+}
 
-    .hero-actions {
-      margin-top: 44px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      opacity: 0;
-      animation: fadeUp 0.9s var(--ease) 0.65s forwards;
-    }
+.hero-actions {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  opacity: 0;
+  animation: fadeUp 0.9s var(--ease) 0.65s forwards;
+}
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 13px 26px;
-      border-radius: 999px;
-      font-family: var(--font-body);
-      font-size: 0.84rem;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      cursor: pointer;
-      border: none;
-      transition: all 0.22s var(--ease);
-    }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border: none;
+  transition: all 0.22s var(--ease);
+}
 
-    .btn-dark {
-      background: var(--ink);
-      color: var(--white);
-    }
+.btn-dark {
+  background: var(--ink);
+  color: var(--white);
+}
 
-    .btn-dark:hover {
-      background: var(--ink-mid);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
-    }
+.btn-dark:hover {
+  background: var(--ink-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
 
-    .btn-outline {
-      background: transparent;
-      color: var(--ink-soft);
-      border: 1px solid var(--border-strong);
-    }
+.btn-outline {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1px solid var(--border-strong);
+}
 
-    .btn-outline:hover {
-      border-color: var(--ink);
-      color: var(--ink);
-      transform: translateY(-2px);
-    }
+.btn-outline:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
 
-    .hero-scroll {
-      position: absolute;
-      bottom: 48px;
-      left: 48px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      opacity: 0;
-      animation: fadeIn 1s var(--ease) 1.4s forwards;
-    }
+.hero-scroll {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0;
+  animation: fadeIn 1s var(--ease) 1.4s forwards;
+}
 
-    .scroll-line {
-      width: 48px;
-      height: 1px;
-      background: var(--muted);
-      transform-origin: left;
-      animation: expandLine 1.2s var(--ease) 1.6s forwards;
-      transform: scaleX(0);
-    }
+.scroll-line {
+  width: 48px;
+  height: 1px;
+  background: var(--muted);
+  transform-origin: left;
+  animation: expandLine 1.2s var(--ease) 1.6s forwards;
+  transform: scaleX(0);
+}
 
-    @keyframes expandLine {
-      to { transform: scaleX(1); }
-    }
+@keyframes expandLine {
+  to { transform: scaleX(1); }
+}
+
+/* MOBILE OPTIMISATION */
+@media (max-width: 768px) {
+  .hero-h1 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+    line-height: 1.18;
+    max-width: 100%;
+  }
+}
 
     /* ── MARQUEE ── */
     .marquee-section {
@@ -930,10 +939,10 @@
     Technical Product Engineer · Aachen, Germany
   </div>
 
-  <h1 class="hero-h1">
-    Bridging engineering, product strategy and AI to solve enterprise 
-    <em>digitization</em> challenges.
-  </h1>
+<h1 class="hero-h1">
+  Bridging engineering, product strategy and AI<br>
+  to solve enterprise <em>digitization</em> challenges.
+</h1>
 
   <p class="hero-sub">
     Engineering professional with 3+ years at Flexera, specialising in enterprise integrations, 
